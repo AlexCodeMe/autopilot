@@ -3,6 +3,7 @@
 import { Book, Headphones, Search } from "lucide-react"
 import { Input } from "../ui/input"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip"
+import { UserButton } from "@clerk/nextjs"
 
 export default function Infobar() {
   return (
@@ -36,6 +37,7 @@ export default function Infobar() {
                 </TooltipContent>
             </Tooltip>
         </TooltipProvider>
+        <UserButton />
     </div>
   )
 }
