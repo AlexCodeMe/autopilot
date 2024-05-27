@@ -1,3 +1,5 @@
+'use client'
+
 import { toast } from 'sonner'
 import React from 'react'
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -56,15 +58,13 @@ export default function Workflow({
                 </Link>
             </CardHeader>
             <div className="flex flex-col items-center gap-2 p-4">
-                <Label
-                    htmlFor="airplane-mode"
+                <Label htmlFor="airplane-mode"
                     className="text-muted-foreground"
                 >
                     {publish! ? 'On' : 'Off'}
                 </Label>
-                <Switch
-                    id="airplane-mode"
-                    // onClick={onPublishFlow}
+                <Switch id="airplane-mode"
+                    onClick={onPublishFlow}
                     defaultChecked={publish!}
                 />
             </div>
