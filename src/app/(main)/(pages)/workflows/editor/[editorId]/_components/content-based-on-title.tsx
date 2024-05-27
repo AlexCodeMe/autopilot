@@ -51,21 +51,21 @@ const ContentBasedOnTitle = ({
   const { selectedNode } = newState.editor
   const title = selectedNode.data.title
 
-  useEffect(() => {
-    const reqGoogle = async () => {
-      const response: { data: { message: { files: any } } } = await axios.get(
-        '/api/drive'
-      )
-      if (response) {
-        console.log(response.data.message.files[0])
-        toast.message("Fetched File")
-        setFile(response.data.message.files[0])
-      } else {
-        toast.error('Something went wrong')
-      }
-    }
-    reqGoogle()
-  }, [])
+  // useEffect(() => {
+  //   const reqGoogle = async () => {
+  //     const response: { data: { message: { files: any } } } = await axios.get(
+  //       '/api/drive'
+  //     )
+  //     if (response) {
+  //       console.log(response.data.message.files[0])
+  //       toast.message("Fetched File")
+  //       setFile(response.data.message.files[0])
+  //     } else {
+  //       toast.error('Something went wrong')
+  //     }
+  //   }
+  //   reqGoogle()
+  // }, [])
 
   // @ts-ignore
   const nodeConnectionType: any = nodeConnection[nodeMapper[title]]
